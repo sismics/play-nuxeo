@@ -1,0 +1,23 @@
+self: play -> nuxeo 1.0.0
+
+configurations:
+    - provided:
+          exclude: true
+
+require:
+    - play
+    - org.mockito -> mockito-core 2.24.0
+    - org.nuxeo.client -> nuxeo-java-client 3.2.0
+    - com.sismics.sapparot -> sapparot 1.2.0
+
+repositories:
+  - nuxeo:
+      type: iBiblio
+      root: "http://maven.nuxeo.com/nexus/content/repositories/public-releases/"
+      contains:
+        - org.nuxeo.client -> *
+  - sismicsNexus:
+      type: iBiblio
+      root: "https://nexus.sismics.com/repository/com.sismics/"
+      contains:
+        - com.sismics.sapparot -> *
