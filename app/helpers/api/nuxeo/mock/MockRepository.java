@@ -32,9 +32,9 @@ public class MockRepository {
             String path = i.getArgument(0);
             Document document = i.getArgument(1);
             ReflectionUtil.setFieldValue(document, "uid", Codec.UUID());
-            ReflectionUtil.setFieldValue(document, "path", path + "/" + document.getName());
+            ReflectionUtil.setFieldValue(document, "path", path);
             documentByIdMap.put(document.getId(), document);
-            documentByPathMap.put(document.getPath(), document);
+            documentByPathMap.put(document.getPath() + "/" + document.getName(), document);
             return document;
         });
 
