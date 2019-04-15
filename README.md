@@ -10,12 +10,12 @@ This plugin adds [Nuxeo](https://www.nuxeo.com/) support to Play! Framework 1 ap
 
 ```
 require:
-    - nuxeo -> nuxeo 1.0.1
+    - nuxeo -> nuxeo 1.1.0
 
 repositories:
-    - sismics:
-        type:       http
-        artifact:   "http://release.sismics.com/repo/play/[module]-[revision].zip"
+    - sismicsNexusRaw:
+        type: http
+        artifact: "https://nexus.sismics.com/repository/sismics/[module]-[revision].zip"
         contains:
             - nuxeo -> *
 
