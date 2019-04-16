@@ -10,7 +10,7 @@ This plugin adds [Nuxeo](https://www.nuxeo.com/) support to Play! Framework 1 ap
 
 ```
 require:
-    - nuxeo -> nuxeo 1.1.0
+    - nuxeo -> nuxeo 1.1.1
 
 repositories:
     - sismicsNexusRaw:
