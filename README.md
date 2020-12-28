@@ -1,3 +1,6 @@
+[![GitHub release](https://img.shields.io/github/release/sismics/play-nuxeo.svg?style=flat-square)](https://github.com/sismics/play-nuxeo/releases/latest)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 # play-nuxeo plugin
 
 This plugin adds [Nuxeo](https://www.nuxeo.com/) support to Play! Framework 1 applications.
@@ -10,7 +13,7 @@ This plugin adds [Nuxeo](https://www.nuxeo.com/) support to Play! Framework 1 ap
 
 ```
 require:
-    - nuxeo -> nuxeo 1.1.0
+    - nuxeo -> nuxeo 1.2.0
 
 repositories:
     - sismicsNexusRaw:
