@@ -1,12 +1,15 @@
 package helpers.api.nuxeo.mock;
 
+import com.google.common.collect.Lists;
 import com.sismics.sapparot.reflection.ReflectionUtil;
 import org.nuxeo.client.objects.Document;
+import org.nuxeo.client.objects.Documents;
 import org.nuxeo.client.objects.Repository;
 import play.libs.Codec;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
@@ -54,6 +57,8 @@ public class MockRepository {
             String path = i.getArgument(0);
             return documentByPathMap.get(path);
         });
+
+        when(repository.query(any(String.class))).thenAnswer(i -> new Documents(Lists.newArrayList(Document.createWithId(UUID.randomUUID().toString(), "Document"))));
 
         return repository;
     }
